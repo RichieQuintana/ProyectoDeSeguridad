@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Lista de Activos";
+}
+
+<h2>Lista de Activos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Valor</th>
+            <th>Nivel de Riesgo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var asset in Model)
+        {
+            <tr>
+                <td>@asset.Name</td>
+                <td>@asset.Value</td>
+                <td>@asset.RiskLevel</td>
+                <td>
+                    <a asp-action="Valorar" asp-route-id="@asset.Id" class="btn btn-primary">Valorar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

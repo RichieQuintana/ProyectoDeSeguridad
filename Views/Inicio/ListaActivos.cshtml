@@ -1,0 +1,27 @@
+﻿@model List<ProyectoDeSeguridad.Models.Asset>
+
+@{
+    ViewData["Title"] = "Lista de Activos";
+}
+
+<h2>Lista de Activos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Valor</th>
+            <th>Nivel de Riesgo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var asset in Model)
+        {
+            <tr>
+                <td>@asset.Name</td>
+                <td>@asset.Value</td>
+                <td>@asset.RiskLevel</td>
+            </tr>
+        }
+    </tbody>
+</table>

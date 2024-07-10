@@ -1,0 +1,41 @@
+﻿@model ProyectoDeSeguridad.Models.Asset
+
+@{
+    ViewData["Title"] = "Evaluar Activo";
+}
+
+<h1>Evaluar Activo</h1>
+
+<form asp-action="Evaluar" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Value"></label>
+        <input asp-for="Value" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="RiskLevel"></label>
+        <input asp-for="RiskLevel" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+<style>
+    body {
+        background-color: #d9d9d9;
+    }
+
+    .btn-custom {
+        background-color: #780000; /* Color rojo */
+        color: #fff; /* Color del texto */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        margin-top: 10px; /* Añade margen arriba */
+    }
+
+        .btn-custom:hover {
+            background-color: #370617;
+            color: #fff;
+        }
+</style>
